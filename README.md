@@ -1,4 +1,4 @@
-# The E8 Theory of Nothing
+# Exceptional Geometry - The E8 Theory of Nothing
 
 ### Zero free parameters. Everything from geometry.
 
