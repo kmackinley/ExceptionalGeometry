@@ -1,0 +1,220 @@
+{
+  "schema_version": "1.0",
+  "last_reviewed": "2026-08-17",
+  "allowed_statuses": [
+    "mathematical_theorem",
+    "exact_symbolic_result",
+    "conditional_derivation",
+    "phenomenological_fit",
+    "postdiction",
+    "conjecture",
+    "open_problem",
+    "known_issue"
+  ],
+  "claims": [
+    {
+      "id": "e8-spectral-factorization",
+      "title": "E8 torus spectral-zeta factorization",
+      "track": "spectral_lattice",
+      "statement": "zeta_Delta(s) = 240 (8 pi^2)^(-s) zeta(s) zeta(s-3)",
+      "status": "mathematical_theorem",
+      "scope": "Scalar Laplacian on R^8/Lambda_E8 with zero mode excluded and standard normalization",
+      "source": "Spectral Zeta Functions of Even Unimodular Lattices, Proposition 3.3",
+      "limitations": []
+    },
+    {
+      "id": "e8-spectral-zeta-zero",
+      "title": "Spectral-zeta value at zero",
+      "track": "spectral_lattice",
+      "statement": "zeta_Delta(0) = -1",
+      "status": "mathematical_theorem",
+      "scope": "E8 torus; the Eisenstein cancellation is not unique to E8",
+      "source": "Spectral Zeta Functions of Even Unimodular Lattices, Theorem 3.5",
+      "limitations": [
+        "Do not describe the value as unique to E8"
+      ]
+    },
+    {
+      "id": "e8-spectral-derivative",
+      "title": "Corrected spectral-zeta derivative",
+      "track": "spectral_lattice",
+      "statement": "zeta_Delta'(0) = 1.8855950840363747; det' Delta = 0.1517387352578082",
+      "status": "known_issue",
+      "scope": "Corrects the numerical values in the February 2026 spectral-zeta and instanton manuscripts",
+      "source": "ERRATA.md E-001",
+      "limitations": [
+        "Manuscript PDFs still require versioned correction"
+      ]
+    },
+    {
+      "id": "e8-spectral-gap",
+      "title": "First nonzero scalar Laplacian eigenvalue",
+      "track": "spectral_lattice",
+      "statement": "lambda_1 = 8 pi^2",
+      "status": "mathematical_theorem",
+      "scope": "Flat E8 torus with lambda_v = 4 pi^2 |v|^2",
+      "source": "Newton's Constant from E8 Yang-Mills, Theorem 9.1",
+      "limitations": [
+        "Does not by itself derive a gravitational hierarchy"
+      ]
+    },
+    {
+      "id": "coxeter-fixed-points",
+      "title": "Prime-order Coxeter fixed-point counts",
+      "track": "finite_symmetry_physical_models",
+      "statement": "Fix(Z2)=256, Fix(Z3)=81, Fix(Z5)=25",
+      "status": "mathematical_theorem",
+      "scope": "Coxeter action on the E8 torus",
+      "source": "Three Fermion Generations from the E8 Coxeter Element, Theorem 3.1",
+      "limitations": [
+        "The physical identification with three chiral generations is conditional"
+      ]
+    },
+    {
+      "id": "three-generations-physics",
+      "title": "Three physical fermion generations",
+      "track": "finite_symmetry_physical_models",
+      "statement": "The three prime-order fixed-point families are proposed as an organizing model for three chiral Standard Model generations",
+      "status": "conditional_derivation",
+      "scope": "Requires a valid compactification, equivariant index, chirality, and representation assignment",
+      "source": "Three Fermion Generations and Standard Model synthesis manuscripts",
+      "limitations": [
+        "Formal equivariant Dirac-index theorem is open",
+        "This is not a claim that particles literally occupy points on a torus"
+      ]
+    },
+    {
+      "id": "higgs-mass",
+      "title": "Higgs mass relation",
+      "track": "finite_symmetry_physical_models",
+      "statement": "lambda = R^2/(2d) = 4/31 and m_H = v R/sqrt(d) = 125.0646 GeV",
+      "status": "conjecture",
+      "scope": "Candidate Hosotani quartic on the proposed compactification",
+      "source": "Standard Model synthesis, Conjecture 2",
+      "limitations": [
+        "Coleman-Weinberg/Hosotani potential has not been computed"
+      ]
+    },
+    {
+      "id": "fermion-mass-model",
+      "title": "Twelve-fermion mass construction",
+      "track": "finite_symmetry_physical_models",
+      "statement": "Prime-indexed, sigma_3-weighted tunneling relations organize the twelve fermion masses",
+      "status": "phenomenological_fit",
+      "scope": "Several manuscripts with evolving parameter accounting",
+      "source": "Prime-Indexed Hierarchies; Fermion Masses; 8D Dirac manuscripts",
+      "limitations": [
+        "Earlier version calibrates kappa_0 per sector",
+        "Operator-level zero-mode proof remains open",
+        "Quark masses require consistent renormalization scheme"
+      ]
+    },
+    {
+      "id": "planck-mass",
+      "title": "Planck mass relation",
+      "track": "gravity_topology",
+      "statement": "M_Pl = v exp(4 pi^2)/sqrt(R) = 1.2161421327e19 GeV",
+      "status": "conditional_derivation",
+      "scope": "Proposed twelve-dimensional gauge/gravity reduction",
+      "source": "Newton's Constant and Instanton manuscripts",
+      "limitations": [
+        "Fundamental action variants conflict",
+        "Global instanton and modulus stabilization are open"
+      ]
+    },
+    {
+      "id": "instanton-locking",
+      "title": "Minimal instanton action equals spectral gap",
+      "track": "gravity_topology",
+      "statement": "S_min = 8 pi^2 = lambda_1",
+      "status": "known_issue",
+      "scope": "Proposed factorized charge-one instanton construction",
+      "source": "The Instanton Theorem",
+      "limitations": [
+        "Untwisted charge-one instanton on T4 is obstructed by the Nahm transform",
+        "Global Spin(7) saturation is open",
+        "Exact modulus potential is open"
+      ]
+    },
+    {
+      "id": "strong-cp",
+      "title": "Strong-CP resolution without an axion",
+      "track": "gravity_topology",
+      "statement": "theta_bar = 0 follows from E8 lattice geometry",
+      "status": "conjecture",
+      "scope": "Proposed compactified E8 gauge theory",
+      "source": "Resolution of the Strong CP Problem from E8 Lattice Self-Duality",
+      "limitations": [
+        "Full gauge-theory duality is not established",
+        "theta=pi exclusion requires proof",
+        "Hermitian mass matrices need not have positive determinant"
+      ]
+    },
+    {
+      "id": "light-hadrons",
+      "title": "Light-hadron geometric relations",
+      "track": "phenomenology",
+      "statement": "Relations for g_A, g_piNN, f_pi, m_rho, and charge radii use E8 integers",
+      "status": "postdiction",
+      "scope": "Low-energy numerical relations built from measured or previously modeled masses",
+      "source": "Light Hadron Structure from E8 Lattice Geometry",
+      "limitations": [
+        "Not derived from QCD",
+        "Several assignments are motivated by numerical proximity"
+      ]
+    },
+    {
+      "id": "brane-local-obstruction",
+      "title": "Local maximal-Higgs obstruction",
+      "track": "matrix_branes",
+      "statement": "The 30-real-dimensional regular-sector Jacobian has rank 28 for 1/2 < R <= 1 and its kernel has no maximal-mode component",
+      "status": "exact_symbolic_result",
+      "scope": "Specified chiral C[(1,1)] squashed SU(3) brane vacuum in softly broken N=4 SYM",
+      "source": "A Local Obstruction to Maximal Higgs Deformations, Theorems V.1 and VI.2",
+      "limitations": [
+        "Local result",
+        "Exceptional modes, finite backreaction, additional branes, and disconnected branches are not excluded"
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "obs-higgs-2026",
+      "claim_id": "higgs-mass",
+      "prediction": 125.0646450647,
+      "measurement": 125.13,
+      "uncertainty": 0.15,
+      "date": "2026-07-30",
+      "source_url": "https://arxiv.org/abs/2607.28396",
+      "assessment": "strong_post_manuscript_agreement_not_unique_confirmation"
+    },
+    {
+      "id": "obs-vcb-2026",
+      "prediction": 0.04094,
+      "measurement": 0.05,
+      "uncertainty_minus": 0.014,
+      "uncertainty_plus": 0.011,
+      "date": "2026-07-22",
+      "source_url": "https://arxiv.org/abs/2603.16414",
+      "assessment": "independent_consistency_check"
+    },
+    {
+      "id": "obs-h0-2026",
+      "prediction": 67.4,
+      "measurement": 66.5,
+      "uncertainty": 1.3,
+      "date": "2026-08-04",
+      "source_url": "https://arxiv.org/abs/2607.27410",
+      "assessment": "consistent_not_blind"
+    },
+    {
+      "id": "obs-neutrino-sum-2026",
+      "prediction_ev": 0.06102,
+      "upper_limit_ev": 0.0592,
+      "confidence": 0.95,
+      "date": "2026-08-04",
+      "source_url": "https://arxiv.org/abs/2607.27410",
+      "assessment": "model_sensitive_boundary"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite the specific manuscript and this repository release when using results from Exceptional Geometry."
+title: "Exceptional Geometry"
+type: software
+authors:
+  - family-names: McKinley
+    given-names: Korey
+repository-code: "https://github.com/kmackinley/ExceptionalGeometry"
+url: "https://kmackinley.github.io/ExceptionalGeometry/"
+license: "All rights reserved unless a file states otherwise"
+version: "0.2.0"
+date-released: "2026-08-17"
+keywords:
+  - E8
+  - spectral geometry
+  - finite symmetry
+  - exceptional Lie algebra
+  - matrix branes
