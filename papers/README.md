@@ -1,32 +1,51 @@
-# Manuscript Catalog
+# Exceptional Geometry Papers
 
-This catalog records the manuscripts supplied for the August 2026 repository review. Status labels describe the strongest public classification supported by the present text; they are not journal decisions.
+The manuscripts below form one connected research program. The list runs from the original fermion-mass observation through the mathematical foundations, unified model, gravity program, low-energy extensions, and the newest matrix-brane result.
 
-The Coxeter element and lattice torus are treated as mathematical tools. Physical mappings based on them are separately labeled as conditional models or phenomenology rather than literal descriptions of space or the universe.
+The Coxeter element and lattice torus are mathematical machinery used for symmetry, fixed-point, spectral, and overlap calculations. Their proposed connection to observed particles and forces is the physical model being investigated—not a claim that the visible universe is literally a Coxeter torus.
 
-| Manuscript | Date | Public status | Public record |
-|---|---|---|---|
-| Prime-Indexed Exponential Hierarchies in Fermion Masses | Feb 2026 | Exploratory phenomenology | [Zenodo 18519399](https://zenodo.org/records/18519399) |
-| The Fine Structure Constant from E8 Spectral Geometry | Feb 2026 | Mixed derivation; individual factors require their own status audit | [Zenodo 18600204](https://zenodo.org/records/18600204) |
-| Three Fermion Generations from the E8 Coxeter Element | Feb 2026 | Exact fixed-point computation; conditional physical interpretation | [Zenodo 18527215](https://zenodo.org/records/18527215) |
-| Fermion Masses from E8 Geometry | Feb 2026 | Evolving phenomenological/model construction; calibration history retained | [Zenodo 18528878](https://zenodo.org/records/18528878) |
-| Standard Model from E8 Yang-Mills, synthesis v2 | Feb 2026 | Research-program synthesis and roadmap | [Zenodo 18624899](https://zenodo.org/records/18624899) |
-| Spectral Zeta Functions of Even Unimodular Lattices | Feb 2026 | Mathematical result with numerical erratum | [Zenodo 18601343](https://zenodo.org/records/18601343) |
-| Zero-Mode Solutions of the 8D Dirac Equation | Feb 2026 | Candidate operator and overlap construction | [Zenodo 18601642](https://zenodo.org/records/18601642) |
-| Newton's Constant from E8 Yang-Mills | Feb 2026 | Exact spectral data plus conditional gravity construction | [Zenodo 18624036](https://zenodo.org/records/18624036) |
-| The Instanton Theorem | Feb 2026 | Proof attempt under revision | [Zenodo 18624240](https://zenodo.org/records/18624240) |
-| Resolution of the Strong CP Problem, v2 | Feb 2026 | Conjectural mechanism | Supplied manuscript; public archive link not verified in this update |
-| Light Hadron Structure from E8 Lattice Geometry | Feb 2026 | Exploratory hadronic phenomenology | Supplied manuscript; public archive link not verified in this update |
-| A Local Obstruction to Maximal Higgs Deformations of a Chiral Squashed SU(3) Brane Vacuum | 10 Aug 2026 | Exact symbolic theorem in the stated matrix model | [Repository paper page](2026-local-chiral-brane-obstruction.md) |
+## Core E8 program
 
-## Resolution of the Strong CP Problem, v2
+1. **[Prime-Indexed Exponential Hierarchies in Fermion Masses](https://zenodo.org/records/18519399)**  
+   Empirical organization of the twelve fermion masses by `m(p) = A exp(−β√p)`, with `p = 2, 3, 5`, and simple cross-sector β ratios.
 
-The supplied manuscript proposes that lattice self-duality, Weyl symmetry, and evenness force the QCD vacuum angle to zero. The repository classifies this as a conjectural mechanism because the required full gauge-theory duality, the exclusion of the \(\theta=\pi\) branch, and the determinant-phase step are not yet established. Discovery of a QCD/Peccei–Quinn axion would contradict this specific mechanism; discovery of an unrelated axion-like particle would not automatically do so.
+2. **[The Fine Structure Constant from E8 Spectral Geometry](https://zenodo.org/records/18600204)**  
+   Proposed E8 spectral decomposition of the electromagnetic coupling.
 
-## Light Hadron Structure from E8 Lattice Geometry
+3. **[Three Fermion Generations from the E8 Coxeter Element](https://zenodo.org/records/18527215)**  
+   Exact fixed-point counts `256`, `81`, and `25` for the prime-order Coxeter actions and their proposed generation interpretation.
 
-The supplied manuscript proposes numerical relations for \(g_A\), \(g_{\pi NN}\), \(f_\pi\), \(m_\rho\), and hadronic charge radii. The repository classifies these as exploratory phenomenology because the assignments are not yet derived from QCD or from a controlled low-energy effective reduction of the proposed exceptional model.
+4. **[Fermion Masses from E8 Geometry](https://zenodo.org/records/18528878)**  
+   Yukawa structure, gauge-dependent tunneling, and the discrete `σ3` shell model for the mass hierarchy.
+
+5. **[Zero-Mode Solutions of the 8D Dirac Equation](https://zenodo.org/records/18601642)**  
+   Candidate zero-mode wavefunctions, overlap integrals, and a universal tunneling-amplitude construction.
+
+6. **[Standard Model from E8 Yang–Mills](https://zenodo.org/records/18624899)**  
+   Synthesis of the particle, gravity, strong-CP, and cosmological parts of the program.
+
+## Spectral geometry and gravity
+
+7. **[Spectral Zeta Functions of Even Unimodular Lattices](https://zenodo.org/records/18601343)**  
+   The explicit E8 factorization `ζΔ(s) = 240(8π²)^−s ζ(s)ζ(s−3)`, the value `ζΔ(0) = −1`, and the broader even-unimodular identity.
+
+8. **[Newton’s Constant from E8 Yang–Mills](https://zenodo.org/records/18624036)**  
+   Frame-field embedding, dimensional reduction, the E8 spectral gap, and the proposed Planck/electroweak hierarchy.
+
+9. **[The Instanton Theorem](https://zenodo.org/records/18624240)**  
+   Proposed topological realization of the `8π²` action scale and exponential gravitational hierarchy.
+
+## Further physical applications
+
+10. **Resolution of the Strong CP Problem from E8 Lattice Self-Duality**  
+    A geometric no-axion proposal based on self-duality, Weyl symmetry, and evenness.
+
+11. **Light Hadron Structure from E8 Lattice Geometry**  
+    Proposed relations for `gA`, `gπNN`, `fπ`, the ρ mass, and hadronic charge radii.
 
 ## Latest paper
 
-The August 2026 brane result is represented by a detailed repository paper page containing its abstract, main theorem, exact rank certificate, scope, and reproducibility requirements. The original PDF and supplementary SymPy script should be attached together in a versioned release so the exact certificate can be independently rerun.
+12. **[A Local Obstruction to Maximal Higgs Deformations of a Chiral Squashed SU(3) Brane Vacuum](2026-local-chiral-brane-obstruction.md)**  
+    Exact symbolic analysis of the full regular traceless deformation sector. The Jacobian has rank `28` and a two-dimensional phase kernel throughout the plus branch, with no maximal-mode tangent.
+
+The newest result is local: it does not exclude exceptional scalar modes, finite backreaction, additional branes, or disconnected solution branches. It identifies where a successful massive chiral vacuum would need additional structure.
