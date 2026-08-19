@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="E8 Atlas — an interactive 3D explorer for the 240 roots, Coxeter motion, prime fixed-point sectors, spectral shells, and proposed physical mappings of Exceptional Geometry." name="description"/>
+<meta content="#07070b" name="theme-color"/>
+<title>E8 Atlas · Exceptional Geometry</title>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div aria-label="Interactive three-dimensional visualization" id="scene"></div>
+<div id="vignette"></div><div id="grain"></div>
+<header class="topbar">
+<a aria-label="Back to Exceptional Geometry" class="brand" href="../">
+<span class="brand-mark"></span><span class="brand-copy"><strong>Exceptional Geometry</strong><span>Interactive mathematical atlas</span></span>
+</a>
+<nav aria-label="Explorer modes" class="modes">
+<button class="mode-btn active" data-mode="roots">1 · Roots</button>
+<button class="mode-btn" data-mode="coxeter">2 · Coxeter</button>
+<button class="mode-btn" data-mode="fixed">3 · Prime sectors</button>
+<button class="mode-btn" data-mode="spectrum">4 · Spectrum</button>
+<button class="mode-btn" data-mode="physics">5 · Physics</button>
+</nav>
+<div class="top-actions">
+<button aria-label="Reset view" class="icon-btn" id="resetView" title="Reset view">R</button>
+<button aria-label="Help" class="icon-btn" id="helpButton" title="Help">?</button>
+</div>
+</header>
+<section aria-live="polite" class="panel info-panel">
+<div class="eyebrow" id="modeEyebrow">The 240 roots</div>
+<h1 id="modeTitle">The <em>E₈ root system</em></h1>
+<p id="modeCopy">Every point is generated from the exact eight-dimensional E₈ root system and projected into three dimensions. Drag to rotate, scroll to zoom, and select a root to inspect it.</p>
+<div class="formula" id="modeFormula">Φ(E₈) = {±eᵢ ± eⱼ} ∪ {½(±1,…,±1)}
+|Φ| = 240   ·   |α|² = 2</div>
+<div class="status-line"><span id="modeStatus">8 Coxeter orbits · 30 roots each</span><strong id="fpsStatus">LIVE</strong></div>
+</section>
+<aside class="panel detail-panel">
+<div class="detail-title"><span>Selected object</span><span id="selectionId">none</span></div>
+<div class="metric-grid">
+<div class="metric"><span>Squared norm</span><strong id="metricNorm">—</strong></div>
+<div class="metric"><span>Coxeter orbit</span><strong id="metricOrbit">—</strong></div>
+<div class="metric"><span>Orbit phase</span><strong id="metricPhase">—</strong></div>
+<div class="metric"><span>Inner product</span><strong id="metricInner">—</strong></div>
+</div>
+<div class="root-vector" id="rootVector">Select one of the 240 points.</div>
+<div class="detail-note" id="detailNote">Coordinates are shown in the standard orthonormal realization of E₈.</div>
+</aside>
+<div class="controls" id="controls">
+<button class="small-btn" id="playButton" title="Play or pause">Play</button>
+<button class="small-btn" id="prevButton" title="Previous step">−</button>
+<div class="slider-wrap"><label for="stepSlider">Coxeter step</label><input id="stepSlider" max="30" min="0" step="0.01" type="range" value="0"/><output id="stepOutput">0</output></div>
+<button class="small-btn" id="nextButton" title="Next step">+</button>
+<button class="small-btn active" id="autoRotateButton" title="Toggle slow rotation">Orbit</button>
+</div>
+<div class="scene-labels" id="sceneLabels">
+<div class="scene-label" id="label2"><strong>ℤ₂</strong><span>256 fixed points</span></div>
+<div class="scene-label" id="label3"><strong>ℤ₃</strong><span>81 fixed points</span></div>
+<div class="scene-label" id="label5"><strong>ℤ₅</strong><span>25 fixed points</span></div>
+</div>
+<div class="physics-cards" id="physicsCards">
+<div class="physics-card"><div class="tag">Flavor proposal</div><strong>Three prime sectors</strong><p>The exact ℤ₂, ℤ₃, and ℤ₅ fixed-point counts motivate a proposed organization of three generations.</p><code>p = 2, 3, 5</code></div>
+<div class="physics-card"><div class="tag">Higgs relation</div><strong>125.06 GeV</strong><p>A model relation built from the electroweak scale, rank, and dimension.</p><code>mH = vR/√d</code></div>
+<div class="physics-card"><div class="tag">Gravity proposal</div><strong>The hierarchy</strong><p>The spectral gap supplies the candidate exponential scale in the gravity construction.</p><code>MPl = v·e^(4π²)/√R</code></div>
+<div class="physics-card"><div class="tag">Prospective test</div><strong>61 meV</strong><p>The predicted neutrino mass sum lies near the normal-ordering floor and current cosmological sensitivity.</p><code>Σmν ≈ 61 meV</code></div>
+</div>
+<div class="overlay" id="introOverlay">
+<div class="intro">
+<div class="sigil"></div><div class="overline">Exceptional Geometry presents</div>
+<h2>E₈ <em>Atlas</em></h2>
+<p>An interactive view of the exact 240-root system, the order-30 Coxeter action, prime-order fixed-point sectors, and the spectral shells that motivate the broader research program.</p>
+<div class="intro-stats">
+<div class="intro-stat"><strong>240</strong><span>roots</span></div>
+<div class="intro-stat"><strong>8 × 30</strong><span>Coxeter orbits</span></div>
+<div class="intro-stat"><strong>256 · 81 · 25</strong><span>prime fixed points</span></div>
+<div class="intro-stat"><strong>8π²</strong><span>spectral gap</span></div>
+</div>
+<button class="enter-btn" id="enterButton">Enter the atlas</button>
+</div>
+</div>
+<div class="overlay hidden" id="helpOverlay">
+<div class="help">
+<h2>How to explore</h2>
+<div class="help-grid">
+<div class="help-item"><strong>Drag</strong>Rotate the projection in three dimensions.</div>
+<div class="help-item"><strong>Wheel / pinch</strong>Zoom in and out.</div>
+<div class="help-item"><strong>Click a root</strong>Inspect coordinates and Coxeter-orbit data.</div>
+<div class="help-item"><strong>Keys 1–5</strong>Switch between explorer modes.</div>
+<div class="help-item"><strong>Space</strong>Play or pause the Coxeter action.</div>
+<div class="help-item"><strong>R</strong>Reset the camera and orientation.</div>
+</div>
+<button class="close-help" id="closeHelp">Return to atlas</button>
+</div>
+</div>
+<div id="error"><div><h2>WebGL could not start</h2><p>The atlas requires WebGL and the Three.js library. Try a current desktop or mobile browser with hardware acceleration enabled, then reload this page.</p><a href="../" style="color:var(--gold-bright)">Return to Exceptional Geometry</a></div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ Exceptional Geometry is an independent research program exploring whether the st
 
 The project starts from exact mathematics—lattice spectra, Coxeter actions, fixed-point counts, and symbolic matrix-model calculations—and then develops physical models around those structures. The Coxeter element and the E8 lattice torus are mathematical tools in the construction; the claim is not that the visible universe is literally a torus.
 
-**[Open the GitHub Pages site](https://kmackinley.github.io/ExceptionalGeometry/)** · **[Browse the papers](papers/README.md)** · **[Open the 3D explorer](https://kmackinley.github.io/TheE8FrameworkExplorer/)**
+**[Open the GitHub Pages site](https://kmackinley.github.io/ExceptionalGeometry/)** · **[Browse the papers](papers/README.md)** · **[Open E8 Atlas](https://kmackinley.github.io/ExceptionalGeometry/explorer/)**
 
 ---
 
