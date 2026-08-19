@@ -173,7 +173,7 @@ function bindEvents(){
   });
 }
 function resetView(){camera.position.set(0,0,currentMode==='fixed'?10.5:8.4);world.rotation.set(.22,-.38,.08);selectedRoot=-1;selectionMesh.visible=false;updateSelectionPanel()}
-function togglePlay(){playing=!playing;if(currentMode!=='coxeter')setMode('coxeter');updatePlayButton()}
+function togglePlay(){if(currentMode!=='coxeter')setMode('coxeter');playing=!playing;updatePlayButton()}
 function updatePlayButton(){const b=document.getElementById('playButton');b.textContent=playing?'Pause':'Play';b.classList.toggle('active',playing)}
 function setStep(v){stepValue=((v%30)+30)%30;document.getElementById('stepSlider').value=stepValue;document.getElementById('stepOutput').value=Math.floor(stepValue).toString().padStart(2,'0');updateCoxeterPositions()}
 function updateCoxeterPositions(){
@@ -187,9 +187,12 @@ function updateNeighborLines(current=projectedRoots){
   const r=roots[selectedRoot],arr=[];roots.forEach((s,i)=>{if(i!==selectedRoot && Math.abs(dot(r,s)-1)<1e-7)arr.push(...current[selectedRoot],...current[i])});
   neighborLines.geometry.setAttribute('position',new THREE.Float32BufferAttribute(arr,3));neighborLines.geometry.computeBoundingSphere();
 }
+function currentRootPositions(){
+  const a=rootPoints.geometry.attributes.position;return roots.map((_,i)=>[a.getX(i),a.getY(i),a.getZ(i)]);
+}
 function selectAt(x,y){
   const rect=renderer.domElement.getBoundingClientRect();pointer.x=((x-rect.left)/rect.width)*2-1;pointer.y=-((y-rect.top)/rect.height)*2+1;raycaster.setFromCamera(pointer,camera);
-  const hits=raycaster.intersectObject(rootPoints);if(!hits.length)return;selectedRoot=hits[0].index;selectionMesh.visible=true;selectionMesh.position.copy(hits[0].point);updateNeighborLines();updateSelectionPanel();
+  const hits=raycaster.intersectObject(rootPoints);if(!hits.length)return;selectedRoot=hits[0].index;const positions=currentRootPositions();selectionMesh.visible=true;selectionMesh.position.fromArray(positions[selectedRoot]);updateNeighborLines(positions);updateSelectionPanel();
 }
 function updateSelectionPanel(){
   const ids=['metricNorm','metricOrbit','metricPhase','metricInner','rootVector','selectionId'];
